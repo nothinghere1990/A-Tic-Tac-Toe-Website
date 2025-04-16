@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改良版井字遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with game title -->
+    <header>
+        <h1>改良版井字遊戲</h1>
+    </header>
+    
+    <!-- Main game container -->
+    <main>
+        <!-- Player 1 info -->
+        <div class="player-info" id="player1">
+            <h2>P1</h2>
+            <div class="player-color"></div>
+            <div class="marker-container">
+                <div id="p1-marker" class="marker-display"></div>
+            </div>
+            <input type="file" id="p1-upload" accept="image/*">
+            <label for="p1-upload" class="upload-btn">上傳自訂標記</label>
+        </div>
+        
+        <!-- Game board -->
+        <div class="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <!-- Player 2 info -->
+        <div class="player-info" id="player2">
+            <h2>P2</h2>
+            <div class="player-color"></div>
+            <div class="marker-container">
+                <div id="p2-marker" class="marker-display"></div>
+            </div>
+            <input type="file" id="p2-upload" accept="image/*">
+            <label for="p2-upload" class="upload-btn">上傳自訂標記</label>
+        </div>
+    </main>
+    
+    <!-- Game status and controls -->
+    <div class="game-status">
+        <p id="status-message">遊戲開始，P1 先行</p>
+        <button id="restart-btn">重新開始</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
